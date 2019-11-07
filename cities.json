@@ -1,0 +1,509 @@
+{
+  "provinces": [
+    {
+      "nombre": "Buenos Aires",
+      "id": 1,
+      "distanciaBsAs": 0,
+      "limitrofes": [
+        {
+          "id": 11,
+          "distancia": 375
+        },
+        {
+          "id": 8,
+          "distancia": 393
+        },
+        {
+          "id": 18,
+          "distancia": 579
+        },
+        {
+          "id": 12,
+          "distancia": 646
+        },
+        {
+          "id": 20,
+          "distancia": 799
+        }
+      ]
+    },
+    {
+      "nombre": "Jujuy",
+      "id": 2,
+      "distanciaBsAs": 1543,
+      "limitrofes": [
+        {
+          "id": 3,
+          "distancia": 67
+        }
+      ]
+    },
+    {
+      "nombre": "Salta",
+      "id": 3,
+      "distanciaBsAs": 1510,
+      "limitrofes": [
+        {
+          "id": 2,
+          "distancia": 67
+        },
+        {
+          "id": 4,
+          "distancia": 228
+        },
+        {
+          "id": 5,
+          "distancia": 353
+        },
+        {
+          "id": 16,
+          "distancia": 410
+        },
+        {
+          "id": 7,
+          "distancia": 706
+        },
+        {
+          "id": 6,
+          "distancia": 741
+        }
+      ]
+    },
+    {
+      "nombre": "Tucuman",
+      "id": 4,
+      "distanciaBsAs": 1203,
+      "limitrofes": [
+        {
+          "id": 5,
+          "distancia": 141
+        },
+        {
+          "id": 16,
+          "distancia": 189
+        },
+        {
+          "id": 3,
+          "distancia": 228
+        }
+      ]
+    },
+    {
+      "nombre": "Santiago del Estero",
+      "id": 5,
+      "distanciaBsAs": 1043,
+      "limitrofes": [
+        {
+          "id": 4,
+          "distancia": 141
+        },
+        {
+          "id": 16,
+          "distancia": 166
+        },
+        {
+          "id": 3,
+          "distancia": 353
+        },
+        {
+          "id": 12,
+          "distancia": 401
+        },
+        {
+          "id": 7,
+          "distancia": 523
+        },
+        {
+          "id": 8,
+          "distancia": 547
+        }
+      ]
+    },
+    {
+      "nombre": "Formosa",
+      "id": 6,
+      "distanciaBsAs": 1191,
+      "limitrofes": [
+        {
+          "id": 7,
+          "distancia": 161
+        },
+        {
+          "id": 3,
+          "distancia": 741
+        }
+      ]
+    },
+    {
+      "nombre": "Chaco",
+      "id": 7,
+      "distanciaBsAs": 1023,
+      "limitrofes": [
+        {
+          "id": 9,
+          "distancia": 13
+        },
+        {
+          "id": 6,
+          "distancia": 161
+        },
+        {
+          "id": 8,
+          "distancia": 495
+        },
+        {
+          "id": 5,
+          "distancia": 523
+        },
+        {
+          "id": 3,
+          "distancia": 706
+        }
+      ]
+    },
+    {
+      "nombre": "Santa Fe",
+      "id": 8,
+      "distanciaBsAs": 478,
+      "limitrofes": [
+        {
+          "id": 11,
+          "distancia": 19
+        },
+        {
+          "id": 12,
+          "distancia": 330
+        },
+        {
+          "id": 1,
+          "distancia": 393
+        },
+        {
+          "id": 7,
+          "distancia": 495
+        },
+        {
+          "id": 9,
+          "distancia": 498
+        },
+        {
+          "id": 5,
+          "distancia": 547
+        }
+      ]
+    },
+    {
+      "nombre": "Corrientes",
+      "id": 9,
+      "distanciaBsAs": 940,
+      "limitrofes": [
+        {
+          "id": 7,
+          "distancia": 13
+        },
+        {
+          "id": 10,
+          "distancia": 291
+        },
+        {
+          "id": 8,
+          "distancia": 498
+        },
+        {
+          "id": 11,
+          "distancia": 500
+        }
+      ]
+    },
+    {
+      "nombre": "Misiones",
+      "id": 10,
+      "distanciaBsAs": 1040,
+      "limitrofes": [
+        {
+          "id": 9,
+          "distancia": 291
+        }
+      ]
+    },
+    {
+      "nombre": "Entre Ríos",
+      "id": 11,
+      "distanciaBsAs": 480,
+      "limitrofes": [
+        {
+          "id": 8,
+          "distancia": 19
+        },
+        {
+          "id": 1,
+          "distancia": 375
+        },
+        {
+          "id": 9,
+          "distancia": 500
+        }
+      ]
+    },
+    {
+      "nombre": "Cordoba",
+      "id": 12,
+      "distanciaBsAs": 715,
+      "limitrofes": [
+        {
+          "id": 15,
+          "distancia": 293
+        },
+        {
+          "id": 8,
+          "distancia": 330
+        },
+        {
+          "id": 13,
+          "distancia": 340
+        },
+        {
+          "id": 16,
+          "distancia": 362
+        },
+        {
+          "id": 5,
+          "distancia": 401
+        },
+        {
+          "id": 18,
+          "distancia": 577
+        },
+        {
+          "id": 1,
+          "distancia": 646
+        }
+      ]
+    },
+    {
+      "nombre": "La Rioja",
+      "id": 13,
+      "distanciaBsAs": 1150,
+      "limitrofes": [
+        {
+          "id": 16,
+          "distancia": 149
+        },
+        {
+          "id": 14,
+          "distancia": 283
+        },
+        {
+          "id": 12,
+          "distancia": 340
+        },
+        {
+          "id": 15,
+          "distancia": 435
+        }
+      ]
+    },
+    {
+      "nombre": "San Juan",
+      "id": 14,
+      "distanciaBsAs": 1110,
+      "limitrofes": [
+        {
+          "id": 17,
+          "distancia": 152
+        },
+        {
+          "id": 13,
+          "distancia": 283
+        },
+        {
+          "id": 15,
+          "distancia": 284
+        }
+      ]
+    },
+    {
+      "nombre": "San Luis",
+      "id": 15,
+      "distanciaBsAs": 790,
+      "limitrofes": [
+        {
+          "id": 17,
+          "distancia": 235
+        },
+        {
+          "id": 14,
+          "distancia": 284
+        },
+        {
+          "id": 12,
+          "distancia": 293
+        },
+        {
+          "id": 18,
+          "distancia": 412
+        },
+        {
+          "id": 13,
+          "distancia": 435
+        }
+      ]
+    },
+    {
+      "nombre": "Catamarca",
+      "id": 16,
+      "distanciaBsAs": 1145,
+      "limitrofes": [
+        {
+          "id": 13,
+          "distancia": 149
+        },
+        {
+          "id": 5,
+          "distancia": 166
+        },
+        {
+          "id": 4,
+          "distancia": 189
+        },
+        {
+          "id": 12,
+          "distancia": 362
+        },
+        {
+          "id": 3,
+          "distancia": 410
+        }
+      ]
+    },
+    {
+      "nombre": "Mendoza",
+      "id": 17,
+      "distanciaBsAs": 1050,
+      "limitrofes": [
+        {
+          "id": 14,
+          "distancia": 152
+        },
+        {
+          "id": 15,
+          "distancia": 235
+        },
+        {
+          "id": 18,
+          "distancia": 586
+        },
+        {
+          "id": 19,
+          "distancia": 676
+        }
+      ]
+    },
+    {
+      "nombre": "La Pampa",
+      "id": 18,
+      "distanciaBsAs": 620,
+      "limitrofes": [
+        {
+          "id": 15,
+          "distancia": 412
+        },
+        {
+          "id": 20,
+          "distancia": 477
+        },
+        {
+          "id": 12,
+          "distancia": 577
+        },
+        {
+          "id": 1,
+          "distancia": 579
+        },
+        {
+          "id": 17,
+          "distancia": 586
+        }
+      ]
+    },
+    {
+      "nombre": "Neuquen",
+      "id": 19,
+      "distanciaBsAs": 1158,
+      "limitrofes": [
+        {
+          "id": 20,
+          "distancia": 479
+        },
+        {
+          "id": 17,
+          "distancia": 676
+        }
+      ]
+    },
+    {
+      "nombre": "Rio Negro",
+      "id": 20,
+      "distanciaBsAs": 960,
+      "limitrofes": [
+        {
+          "id": 21,
+          "distancia": 327
+        },
+        {
+          "id": 18,
+          "distancia": 477
+        },
+        {
+          "id": 19,
+          "distancia": 479
+        },
+        {
+          "id": 1,
+          "distancia": 799
+        }
+      ]
+    },
+    {
+      "nombre": "Chubut",
+      "id": 21,
+      "distanciaBsAs": 1455,
+      "limitrofes": [
+        {
+          "id": 20,
+          "distancia": 327
+        },
+        {
+          "id": 22,
+          "distancia": 975
+        }
+      ]
+    },
+    {
+      "nombre": "Santa Cruz",
+      "id": 22,
+      "distanciaBsAs": 2635,
+      "limitrofes": [
+        {
+          "id": 23,
+          "distancia": 359
+        },
+        {
+          "id": 21,
+          "distancia": 975
+        }
+      ]
+    },
+    {
+      "nombre": "Tierra del Fuego",
+      "id": 23,
+      "distanciaBsAs": 3228,
+      "limitrofes": [
+        {
+          "id": 22,
+          "distancia": 359
+        }
+      ]
+    }
+  ]
+}

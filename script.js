@@ -1,3 +1,4 @@
+
 function PriorityQueue () {
   this._nodes = [];
 
@@ -80,9 +81,60 @@ function Graph(){
   };
 }
 
+function readJson() {
+  return new Promise(function (resolve, reject) {
+    let request = new XMLHttpRequest();
+    request.overrideMimeType("application/json");
+    request.open('GET','./cities.json');
+    request.send();
+    setTimeout(()=>{
+      resolve(JSON.parse(request.response));
+    },100);
+  });
+}
+
 var g = new Graph();
 
-g.addVertex('A', {B: 7, C: 8});
+var provinces;
+    readJson().then((value => {
+      provinces=value['provinces'];
+      var limitrofes;
+      var prov
+      var edge;
+      var province;
+      for (p = 0;p < provinces.length ; p++){
+
+        province = provinces[p];
+        limitrofes = provinces[p]['limitrofes'];
+        edge='';
+
+        edge = '{';
+        for (i = 0 ; i< limitrofes.length ; i++){
+          if(i == 0){
+            edge = edge+limitrofes[i]['id']+':'+' '+limitrofes[i]['distancia'];
+          }else {
+            edge = edge+', '+limitrofes[i]['id']+':'+' '+limitrofes[i]['distancia'];
+          }
+        }
+        edge = edge+'}';
+
+        prov= "'" + province['nombre'] +"'";
+        console.log(prov);
+        g.addVertex(prov,edge);
+       // console.log(edge);
+      }
+
+      console.log(g.shortestPath('1', '8').concat(['1']).reverse());
+    }));
+
+
+
+
+/*  for (i = 0 ; i< provinces.length(); i++){
+    g.addVertex(provinces[0]['id'],{})
+  }*/
+
+/*g.addVertex('A', {B: 7, C: 8});
 g.addVertex('B', {A: 7, F: 2});
 g.addVertex('C', {A: 8, F: 6, G: 4});
 g.addVertex('D', {F: 8});
@@ -92,4 +144,4 @@ g.addVertex('G', {C: 4, F: 9});
 g.addVertex('H', {E: 1, F: 3});
 
 // Log test, with the addition of reversing the path and prepending the first node so it's more readable
-console.log(g.shortestPath('B', 'D').concat(['B']).reverse());
+console.log(g.shortestPath('B', 'D').concat(['B']).reverse());*/
