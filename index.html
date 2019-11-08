@@ -88,14 +88,12 @@
       <!-- Portfolio Grid Items -->
       <div class="container" >
 
-        <Form class="" style="text-align: center;">
-            <select class="form-control" name="desde" style="float: left;width: 49%;">
-              <option value="">Buenos Aires</option>
+        <Form class="" style="text-align: center;" onsubmit="getCost()">
+          <select class="form-control" name="desde" style="float: left;width: 49%;" id="select1">
             </select>
-            <select class="form-control" name="hasta" style="float: right; width: 49%;">
-              <option value="">Buenos Aires</option>
+            <select class="form-control" name="hasta" style="float: right; width: 49%;" id="select2">
             </select>
-          <button class="btn btn-danger" type="submit" style="width:49%;margin: 10px; ">Calcular</button>
+          <button class="btn btn-danger" type="" style="width:49%;margin: 10px; ">Calcular</button>
         </Form>
 
       </div>
@@ -106,10 +104,10 @@
 
   <!-- About Section -->
   <section class="page-section bg-primary text-white mb-0" id="about">
-    <div class="container">
+    <div class="container" style="text-align: center;">
 
       <!-- About Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-white">Ruta Optima:</h2>
+      <h2 class="page-section-heading text-center text-uppercase text-white">Ruta Optima</h2>
 
       <!-- Icon Divider -->
       <div class="divider-custom divider-light">
@@ -121,25 +119,16 @@
       </div>
 
       <!-- About Section Content -->
-    
-  </section>
-
-  <!-- Contact Section -->
-  <section class="page-section" id="contact">
-    <div class="container">
-
-      <!-- Contact Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
-
-      <!-- Icon Divider -->
-      <div class="divider-custom">
+      <h3 id="rutas"></h3><br>
+      <h2 class="page-section-heading text-center text-uppercase text-white">KM totales</h2>
+      <div class="divider-custom divider-light">
         <div class="divider-custom-line"></div>
         <div class="divider-custom-icon">
           <i class="fas fa-star"></i>
         </div>
         <div class="divider-custom-line"></div>
       </div>
-
+      <h3 id="costo"></h3>
     </div>
   </section>
 

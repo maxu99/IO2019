@@ -1,4 +1,24 @@
 
+var provinces;
+readJson().then((value => {
+  provinces=value['provinces'];
+
+  var option,o2 ;
+  var txt,txt2 ;
+  for(i=0; i< provinces.length; i++){
+    txt = document.createTextNode(provinces[i]['nombre']);
+    txt2 = document.createTextNode(provinces[i]['nombre']);
+    option = document.createElement('option');
+    option.appendChild(txt);
+    option.value = provinces[i]['id'];
+    o2 = document.createElement('option');
+    o2.appendChild(txt2);
+    o2.value = provinces[i]['id'];
+    document.getElementById('select1').appendChild(option);
+    document.getElementById('select2').appendChild(o2);
+  }
+}));
+
 function PriorityQueue () {
   this._nodes = [];
 
@@ -33,6 +53,7 @@ function Graph(){
         previous = {},
         path = [],
         smallest, vertex, neighbor, alt;
+
 
     for(vertex in this.vertices) {
       if(vertex === start) {
@@ -75,9 +96,10 @@ function Graph(){
           nodes.enqueue(alt, neighbor);
         }
       }
-    }
 
+    }
     return path;
+
   };
 }
 
@@ -95,41 +117,7 @@ function readJson() {
 
 var g = new Graph();
 
-var provinces;
-  readJson().then((value => {
-      provinces=value['provinces'];
-      var limitrofes;
-      var prov;
-      var edge1;
-      var edge2;
-      var province;
-      for (p = 0;p < provinces.length ; p++){
 
-        province = provinces[p];
-        limitrofes = provinces[p]['limitrofes'];
-        edge='';
-
-        for (i = 0 ; i< limitrofes.length ; i++){
-          if(i > 0){
-            edge1 = edge+limitrofes[i]['id']+':'+' '+limitrofes[i]['distancia'];
-          }else {
-            edge = edge+', '+limitrofes[i]['id']+':'+' '+limitrofes[i]['distancia'];
-          }
-        }
-
-console.log(typeof edge);
-        //edge = JSON.parse(edge);
-       // console.log(edge);
-        //prov= "'" + province['id'] +"'";
-        //console.log(JSON.stringify(edge));
-       //g.addVertex(province['id'],'['+ edge +']');
-
-       // console.log(edge);
-      }
-     // console.log(g);
-
-      //console.log(g.shortestPath('1','8').concat(['1']).reverse());
-    }));
 
 
 g.addVertex('1', {11: 375, 8: 393, 18: 579, 12: 646, 20: 799});
@@ -158,5 +146,57 @@ g.addVertex('23', {22: 359});
 
 
 // Log test, with the addition of reversing the path and prepending the first node so it's more readable
-console.log(g.shortestPath('10', '19').concat(['10']).reverse());
-console.log(g);
+//console.log(g.shortestPath('1', '8').concat(['1']).reverse());
+
+function getCost() {
+  var input1 = document.getElementById('select1').value;
+  var input2 = document.getElementById('select2').value;
+  var nodes = g.shortestPath(input1, input2).concat([input1]).reverse();
+  var fullnodes = [];
+  var cost = 0;
+  var siguiente;
+  var limitrofes;
+  var names = '';
+  if (input1 == input2){
+    window.alert('LOS NODOS QUE SELECCIONÓ SON INCORRECTOS!');
+    location.reload();
+  }
+
+  console.log(nodes);
+
+  event.preventDefault();
+
+  for(i=0; i < nodes.length ; i++){
+      for(j=0; j < provinces.length; j++){
+        if(provinces[j]['id'] == nodes[i]){
+          fullnodes.push(provinces[j]);
+        }
+      }
+
+  }
+
+  for (i = 0 ; i < (fullnodes.length-1);i++){
+    p=i+1;
+    siguiente = fullnodes[p]['id'];
+    limitrofes = fullnodes[i]['limitrofes'];
+
+    for (j=0;j < limitrofes.length; j++){
+      if(limitrofes[j]['id'] == siguiente){
+        cost = cost + limitrofes[j]['distancia'];
+        console.log(cost);
+      }
+    }
+
+  }
+  for (i = 0 ; i < fullnodes.length;i++){
+    if(names == ''){
+      names = fullnodes[i]['nombre'];
+    }else{
+      names = names + ' -> ' + fullnodes[i]['nombre'];
+    }
+  }
+  div = document.getElementById('rutas');
+  div.innerHTML = names;
+  document.getElementById('costo').innerHTML = cost;
+}
+
